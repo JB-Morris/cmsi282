@@ -26,14 +26,9 @@ class PriorityQueue():
     def __str__(self):
         return str(self.heap)
 
-# k is the parent of node 2k+1 and 2k+2
-
     def sift_up(self, index):
         parent_index = (index - 1) / 2
         if parent_index >= 0 and self.heap[parent_index] > self.heap[index]:
-            # print "Parent: " + str(parent_index)
-            # print "Index: " + str(index)
-            # self.heap[parent_index], self.heap[index] = self.heap[index], self.heap[parent_index]
             temp = self.heap[parent_index]
             self.heap[parent_index] = self.heap[index]
             self.heap[index] = temp
@@ -46,7 +41,6 @@ class PriorityQueue():
         if child_index + 1 < len(self.heap) and self.heap[child_index] > self.heap[child_index + 1]:
             child_index += 1
         if self.heap[index] > self.heap[child_index]:
-            # self.heap[child_index], self.heap[index] = self.heap[index], self.heap[child_index]
             temp = self.heap[child_index]
             self.heap[child_index] = self.heap[index]
             self.heap[index] = temp
