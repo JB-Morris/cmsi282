@@ -14,7 +14,9 @@ class PriorityQueue():
         if len(self.heap) == 0:
             raise Exception("Empty Queue")
         if len(self.heap) == 1:
+            value = self.heap[0]
             self.heap = []
+            return value
         else:
             value = self.heap.pop(0)
             self.sift_down(0)
@@ -45,4 +47,18 @@ class PriorityQueue():
             self.heap[child_index] = self.heap[index]
             self.heap[index] = temp
             self.sift_down(child_index)
-
+#
+# PQueue = PriorityQueue()
+# PQueue.add(20)
+# PQueue.add(50)
+# PQueue.add(2)
+# PQueue.add(27)
+# PQueue.add(90)
+# PQueue.add(900)
+# print PQueue
+# print PQueue.remove()
+# print PQueue.remove()
+# print PQueue.remove()
+# print PQueue.remove()
+# print PQueue.remove()
+# print PQueue.remove()
