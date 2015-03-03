@@ -47,7 +47,7 @@ class PriorityQueue():
             self.heap[child_index] = self.heap[index]
             self.heap[index] = temp
             self.sift_down(child_index)
-#
+
 # PQueue = PriorityQueue()
 # PQueue.add(20)
 # PQueue.add(50)
@@ -62,3 +62,4 @@ class PriorityQueue():
 # print PQueue.remove()
 # print PQueue.remove()
 # print PQueue.remove()
+# print PQueue
